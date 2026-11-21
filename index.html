@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samiyrah Weaver Counseling — Official App</title>
+  <style>
+    :root {
+      --primary: #1565C0;
+      --bg: #F4F7FB;
+      --card: #FFFFFF;
+      --text: #1E293B;
+      --muted: #64748B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: var(--card);
+      max-width: 440px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 36px 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #E3F2FD;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .features {
+      text-align: left;
+      background: #F8FAFC;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 26px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .features li {
+      list-style: none;
+      margin-bottom: 8px;
+    }
+    .features li:last-child { margin-bottom: 0; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-ios {
+      background: #0F172A;
+      color: #FFFFFF;
+    }
+    .btn-android {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+    .privacy-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid #E2E8F0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <span class="badge">Client Companion App</span>
+    <h1>Samiyrah Weaver Counseling</h1>
+    <p class="subtitle">
+      Your pocket guide for between-session grounding, practice FAQs, and immediate support resources in Pennsylvania.
+    </p>
+
+    <ul class="features">
+      <li>🌿 <strong>Grounding Tools:</strong> Interactive Box Breathing &amp; 5-4-3-2-1 exercises</li>
+      <li>🔒 <strong>Private Check-In:</strong> 100% offline daily mood &amp; reflection log</li>
+      <li>📋 <strong>Practice FAQs:</strong> Accepted insurance (Aetna, Cigna, Quest, IBC) &amp; intake info</li>
+      <li>🆘 <strong>24/7 Support:</strong> One-tap access to 988 Lifeline, 911, &amp; local resources</li>
+    </ul>
+
+    <!-- REPLACE THE # WITH YOUR LIVE STORE URLS -->
+    <a id="ios-btn" href="YOUR_APPLE_APP_STORE_URL" class="btn btn-ios">
+      Download for iPhone (App Store)
+    </a>
+    <a id="android-btn" href="https://play.google.com/store/apps/details?id=com.dfheatlabs.samiyrahweaver" class="btn btn-android">
+      Download for Android (Google Play)
+    </a>
+
+    <p class="privacy-note">
+      100% free. No account required. Zero personal data collected or shared.
+    </p>
+
+    <footer>
+      Developed by <a href="https://github.com/jferg719" target="_blank">DF Heat Labs</a> &bull; 
+      <a href="https://jferg719.github.io/dfheatlabs-legal/counseling-privacy.html" target="_blank">Privacy Policy</a>
+    </footer>
+  </div>
+
+  <!-- Optional Smart Highlight: Bumps the user's matching device button to the top -->
+  <script>
+    (function () {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const iosBtn = document.getElementById("ios-btn");
+      const androidBtn = document.getElementById("android-btn");
+
+      if (/android/i.test(ua)) {
+        androidBtn.parentNode.insertBefore(androidBtn, iosBtn);
+      }
+    })();
+  </script>
+
+</body>
+</html>
